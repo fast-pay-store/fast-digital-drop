@@ -57,25 +57,33 @@
         .stat-item .num { font-size: 32px; font-weight: bold; color: #34d399; display: block; margin-bottom: 5px; }
         .stat-item .label { font-size: 13px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* ИНТЕГРАЦИЯ ТВOЕГО ВИДЖЕТА МАГАЗИНА */
-        .widget-container { 
+        /* Конверсионная кнопка действия (Прямая реферальная ссылка) */
+        .cta-box { 
             text-align: center; 
             margin: 55px 0; 
-            padding: 30px;
+            padding: 40px 20px;
             background: #111827;
             border: 1px solid #1f2937;
             border-radius: 14px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
-        .fallback-link-box {
-            margin-top: 20px;
-            font-size: 15px;
+        .btn-action {
+            background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+            color: #ffffff;
+            padding: 22px 65px;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.4);
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .fallback-link {
-            color: #a78bfa;
-            text-decoration: underline;
-            font-weight: 600;
+        .btn-action:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 35px rgba(124, 58, 237, 0.6);
         }
+        .cta-subtext { font-size: 14px; color: #6b7280; margin-top: 15px; display: block; }
 
         /* Экспертные списки и блоки доверия */
         .features-list { padding-left: 25px; color: #d1d5db; }
@@ -110,16 +118,14 @@
             p, .features-list li, .trust-box { font-size: 16px; }
             .stats-grid { gap: 10px; padding: 15px; }
             .stat-item .num { font-size: 20px; }
+            .btn-action { padding: 18px 30px; font-size: 20px; width: 100%; box-sizing: border-box; }
         }
     </style>
-    
-    <!-- ПОДКЛЮЧЕНИЕ ТВOЕГО ОФИЦИАЛЬНОГО СКРИПТА DIGISELLER -->
-    <script>!function(e){var l=function(l){return e.cookie.match(new RegExp("(?:^|; )digiseller-"+l+"=([^;]*)"))},i=l("lang"),s=l("cart_uid"),t=i?"&lang="+i[1]:"",d=s?"&cart_uid="+s[1]:"",r=e.getElementsByTagName("head")[0]||e.documentElement,n=e.createElement("link"),a=e.createElement("script");n.type="text/css",n.rel="stylesheet",n.id="digiseller-css",n.href="//shop.digiseller.com/xml/store2_css.asp?seller_id=816991",a.async=!0,a.id="digiseller-js",a.src="//digiseller.com/store2/digiseller-api.js.asp?seller_id=816991"+t+d,!e.getElementById(n.id)&&r.appendChild(n),!e.getElementById(a.id)&&r.appendChild(a)}(document);</script>
 </head>
 <body>
 
     <div class="main-wrapper">
-        <div class="badge">Проверенный способ • Автовыдача 24/7</div>
+        <div class="badge">Официальный магазин • Автовыдача 24/7</div>
         <h1>Как легально подключить Claude AI Pro / Max в России без риска блокировки аккаунта</h1>
         
         <p>Бесплатная версия нейросети от компании Anthropic накладывает жесткие ограничения на объем обрабатываемого текста и количество сообщений в час. Для разработчиков, аналитиков и авторов контента этого критически мало. Переход на премиальные тарифы Pro или Max полностью решает проблему лимитов и открывает доступ к передовому инструменту автоматизации написания кода — <strong>Claude Code</strong>.</p>
@@ -129,11 +135,11 @@
         <!-- БЛОК СТАТИСТИКИ ОФФЕРА С ПЛАТИ -->
         <div class="stats-grid">
             <div class="stat-item">
-                <span class="num">48 154+</span>
+                <span class="num">48 062+</span>
                 <span class="label">Успешных сделок</span>
             </div>
             <div class="stat-item">
-                <span class="num">10 541</span>
+                <span class="num">10 533</span>
                 <span class="label">Положительных отзывов</span>
             </div>
             <div class="stat-item">
@@ -143,7 +149,7 @@
         </div>
 
         <div class="trust-box">
-            <strong>Опережая вопросы безопасности:</strong> Активация подписки происходит легальным путем через официальные платежные шлюзы Anthropic. Процесс полностью автоматизирован: специальный бот обрабатывает ваш заказ круглосуточно, исключая человеческий фактор и необходимость передавать доступ к вашему основному профилю.
+            <strong>Опережая вопросы безопасности:</strong> Активация подписки происходит легальным путем через официальные платежные шлюзы Anthropic. Процесс полностью автоматизирован: специальный бот в чате заказа обрабатывает ваш заказ круглосуточно, исключая человеческий фактор и необходимость передавать доступ к вашему основному профилю.
         </div>
 
         <h2>Ключевые преимущества премиальных тарифов Claude AI</h2>
@@ -155,30 +161,32 @@
             <li><strong>Пространства Projects:</strong> Создавайте изолированные рабочие папки под разные проекты, загружайте туда постоянные инструкции и код.</li>
         </ul>
 
-        <!-- ИНТЕРАКТИВНЫЙ БЛОК ОПЛАТЫ С ТВOИМ ВИДЖЕТОМ -->
-        <div class="widget-container">
-            <h3 style="margin-top:0; margin-bottom:20px; color:#a78bfa;">Прямое оформление заказа через шлюз Digiseller:</h3>
+        <!-- ЦЕЛЕВАЯ КНОПКА С ТВОЕЙ ССЫЛКОЙ -->
+        <div class="cta-box">
+            <h3 style="margin-top:0; margin-bottom:25px; color:#a78bfa;">Перейти к оформлению заказа на торговой площадке:</h3>
             
-            <!-- ТВOЯ ИНТЕРАКТИВНАЯ КНОПКА КУПИТЬ -->
-            <div style="display: inline-block;" class="digiseller-buy-standalone" data-id="4023986" data-ai="816991" data-img="1" data-img-size="180" data-name="1" data-price="1" data-no-price="0"></div>
+            <!-- ПРЯМАЯ ИСПРАВЛЕННАЯ РЕФЕРАЛЬНАЯ ССЫЛКА НА ТОВАР -->
+            <a href="https://plati.market" target="_blank" class="btn-action">Перейти к покупке на Plati.market</a>
             
-            <!-- ЗАПАСНАЯ ПРЯМАЯ ССЫЛКА НА СЛУЧАЙ БЛОКИРОВКИ СКРИПТОВ БРАУЗЕРОМ -->
-            <div class="fallback-link-box">
-                <p style="font-size:14px; margin-bottom:5px;">Не отображается виджет? Перейдите по прямой ссылке:</p>
-                <a href="https://plati.market/itm/4023986?ai=816991" target="_blank" class="fallback-link">Открыть официальную страницу оплаты Claude AI</a>
-            </div>
+            <span class="cta-subtext">*Мгновенное перенаправление на официальную страницу товара в магазине Plati.market</span>
         </div>
 
         <h2>Пошаговый алгоритм покупки и активации</h2>
         <p>Процесс устроен максимально прозрачно и занимает не более 5 минут вашего времени:</p>
         <ol class="features-list" style="list-style-type: decimal;">
-            <li>Выберите нужный вариант подписки в виджете или перейдите по прямой ссылке выше.</li>
-            <li>Выберите удобный способ оплаты (банковская карта РФ, Система быстрых платесей СБП или криптовалюта) и подтвердите транзакцию.</li>
+            <li>Нажмите на кнопку выше для перехода на страницу товара в официальном магазине.</li>
+            <li>Выберите удобный способ оплаты (банковская карта РФ, Система быстрых платежей СБП или криптовалюта) и подтвердите транзакцию.</li>
             <li>После успешного платежа система моментально сгенерирует уникальный 16-значный код подтверждения.</li>
-            <li>Вставьте полученный код и адрес вашей электронной почты в автоматический чат с ботом на странице заказа oplata.info.</li>
+            <li>Вставьте полученный код и адрес вашей электронной почты в автоматический чат с ботом на странице заказа.</li>
             <li>Бот моментально примет данные и активирует подписку Claude Pro или Max на вашем аккаунте.</li>
         </ol>
 
         <h2>Часто задаваемые вопросы (FAQ)</h2>
         
         <div class="faq-item">
+            <h3>1. Могут ли заблокировать мой аккаунт за такой способ активации?</h3>
+            <p>Нет. Оплата производится официальными зарубежными картами в соответствии с правилами Anthropic. Это не хакерский взлом и не обход систем защиты — подписка является абсолютно легальной, поэтому риск блокировки полностью отсутствует.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>2. Нужно ли мне передавать логин и пароль от аккаунта?</h3>
