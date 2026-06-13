@@ -1,1 +1,147 @@
-<!DOCTYPE html><html><head><title>Main</title></head><body></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Pay Store — Магазин цифровых подписок и кодов</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0f19;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+        .hub-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 25px;
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        header h1 {
+            color: #ffffff;
+            font-size: 46px;
+            margin-0: 0 0 15px 0;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 22px;
+            color: #9ca3af;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Сетка для будущих товаров */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        /* Карточка товара */
+        .product-card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 14px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #7c3aed;
+        }
+        .product-badge {
+            background-color: #7c3aed;
+            color: white;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 20px;
+            display: inline-block;
+            align-self: flex-start;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .product-card h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0 0 15px 0;
+        }
+        .product-card p {
+            color: #9ca3af;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 25px 0;
+            flex-grow: 1;
+        }
+        
+        /* Кнопка перехода на внутреннюю страницу лендинга */
+        .btn-view {
+            background: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #374151;
+            transition: all 0.2s ease;
+        }
+        .product-card:hover .btn-view {
+            background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            color: #4b5563;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hub-wrapper">
+        <header>
+            <h1>Fast Pay Store</h1>
+            <p>Моментальная автоматическая доставка официальных подписок, игровых кодов и лицензионного софта 24/7</p>
+        </header>
+
+        <main class="catalog-grid">
+            
+            <!-- КАРТОЧКА CLAUDE AI -->
+            <div class="product-card">
+                <div>
+                    <div class="product-badge">Нейросети</div>
+                    <h3>Claude AI Pro / Max</h3>
+                    <p>Официальная подписка от Anthropic. Доступ к Claude Code, флагманским моделям Sonnet и Opus. Лимиты x5 и x20 без банов аккаунта.</p>
+                </div>
+                <!-- Ведет на созданную нами внутреннюю страницу на вашем же GitHub -->
+                <a href="./claude-ai-pro/" class="btn-view">Перейти к покупке</a>
+            </div>
+
+            <!-- СЮДА В БУДУЩЕМ МЫ ДОБАВИМ СЛЕДУЮЩИЙ ТОВАР (НАПРИМЕР STEAM) -->
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Fast Pay Store. Все права защищены. Все торговые марки являются собственностью их правообладателей.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
