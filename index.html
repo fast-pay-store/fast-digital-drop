@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Pay Store — Магазин цифровых подписок и кодов</title>
+    <title>Fast Pay Store — Справочник цифровых подписок и кодов</title>
     <style>
         html, body {
             margin: 0;
@@ -14,132 +14,125 @@
             -webkit-font-smoothing: antialiased;
             min-height: 100vh;
         }
-        .hub-wrapper {
-            max-width: 1200px;
+        .hub-container {
+            max-width: 850px;
             margin: 0 auto;
-            padding: 60px 25px;
+            padding: 60px 20px;
             box-sizing: border-box;
         }
         header {
-            text-align: center;
-            margin-bottom: 60px;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
         }
         header h1 {
             color: #ffffff;
-            font-size: 46px;
-            margin-0: 0 0 15px 0;
+            font-size: 38px;
+            margin: 0 0 10px 0;
             font-weight: 700;
         }
         header p {
-            font-size: 22px;
+            font-size: 18px;
             color: #9ca3af;
-            max-width: 700px;
-            margin: 0 auto;
+            margin: 0;
+            line-height: 1.5;
         }
         
-        /* Сетка для будущих товаров */
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .info-section h2 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+        .info-section p {
+            font-size: 16px;
+            color: #9ca3af;
+            line-height: 1.6;
         }
         
-        /* Карточка товара */
-        .product-card {
+        /* Список навигации (Каналы / Ссылки) */
+        .directory-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        .directory-item {
             background-color: #111827;
             border: 1px solid #1f2937;
-            border-radius: 14px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            transition: transform 0.2s, border-color 0.2s;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: border-color 0.2s;
         }
-        .product-card:hover {
-            transform: translateY(-5px);
+        .directory-item:hover {
             border-color: #7c3aed;
         }
-        .product-badge {
-            background-color: #7c3aed;
-            color: white;
-            padding: 6px 12px;
-            font-size: 13px;
-            font-weight: bold;
-            border-radius: 20px;
-            display: inline-block;
-            align-self: flex-start;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        .product-card h3 {
-            color: #ffffff;
-            font-size: 24px;
-            margin: 0 0 15px 0;
-        }
-        .product-card p {
-            color: #9ca3af;
-            font-size: 16px;
-            line-height: 1.5;
-            margin: 0 0 25px 0;
-            flex-grow: 1;
-        }
-        
-        /* Кнопка перехода на внутреннюю страницу лендинга */
-        .btn-view {
-            background: #1f2937;
-            color: #ffffff;
-            text-align: center;
-            padding: 14px;
+        .directory-link {
+            display: block;
+            padding: 20px;
+            color: #a78bfa;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 8px;
-            border: 1px solid #374151;
-            transition: all 0.2s ease;
         }
-        .product-card:hover .btn-view {
-            background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
-            border-color: transparent;
-            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+        .directory-link span {
+            display: block;
+            color: #9ca3af;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 5px;
         }
         
         footer {
-            text-align: center;
-            margin-top: 100px;
+            margin-top: 80px;
+            border-top: 1px solid #1f2937;
+            padding-top: 20px;
             color: #4b5563;
-            font-size: 15px;
+            font-size: 14px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <div class="hub-wrapper">
+    <div class="hub-container">
         <header>
             <h1>Fast Pay Store</h1>
-            <p>Моментальная автоматическая доставка официальных подписок, игровых кодов и лицензионного софта 24/7</p>
+            <p>Центральный навигационный справочник по активации и продлению международных цифровых сервисов, подписок и игровых платформ.</p>
         </header>
 
-        <main class="catalog-grid">
+        <main class="info-section">
+            <h2>Информационный указатель</h2>
+            <p>В данном справочнике собраны актуальные пошаговые руководства и верифицированные платежные шлюзы для бесперебойного доступа к премиальным ИТ-инструментам и игровым экосистемам в условиях региональных ограничений. Выберите интересующее вас направление для перехода к детальной инструкции.</p>
             
-            <!-- КАРТОЧКА CLAUDE AI -->
-            <div class="product-card">
-                <div>
-                    <div class="product-badge">Нейросети</div>
-                    <h3>Claude AI Pro / Max</h3>
-                    <p>Официальная подписка от Anthropic. Доступ к Claude Code, флагманским моделям Sonnet и Opus. Лимиты x5 и x20 без банов аккаунта.</p>
-                </div>
-                <!-- Ведет на созданную нами внутреннюю страницу на вашем же GitHub -->
-                <a href="./claude-ai-pro/" class="btn-view">Перейти к покупке</a>
-            </div>
+            <!-- НАВИГАЦИОННЫЕ КАНАЛЫ -->
+            <ul class="directory-list">
+                
+                <!-- Ссылка на Claude AI -->
+                <li class="directory-item">
+                    <a href="./claude-ai-pro/" class="directory-link">
+                        1. Подписка Claude AI Pro / Max / Code
+                        <span>Инструкция по безопасной активации профессионального ИИ-ассистента от Anthropic без передачи паролей.</span>
+                    </a>
+                </li>
+                
+                <!-- ЗАГОТОВКА ПОД БУДУЩИЙ ТОВАР (STEAM) -->
+                <!-- 
+                <li class="directory-item">
+                    <a href="./steam/" class="directory-link">
+                        2. Пополнение кошелька Steam (РФ и СНГ)
+                        <span>Пошаговое руководство по моментальному зачислению средств на баланс Steam по логину аккаунта.</span>
+                    </a>
+                </li>
+                -->
 
-            <!-- СЮДА В БУДУЩЕМ МЫ ДОБАВИМ СЛЕДУЮЩИЙ ТОВАР (НАПРИМЕР STEAM) -->
+            </ul>
 
+            <h2>Ограничение ответственности</h2>
+            <p>Все товарные знаки, логотипы и бренды, упомянутые в справочнике, являются собственностью их законных владельцев. Данный ресурс выполняет исключительно навигационную и информационную функцию, помогая пользователям находить безопасные платежные решения на верифицированных торговых площадках.</p>
         </main>
 
         <footer>
-            <p>&copy; 2026 Fast Pay Store. Все права защищены. Все торговые марки являются собственностью их правообладателей.</p>
+            <p>&copy; 2026 Fast Pay Store. Информационный хаб цифровой дистрибуции.</p>
         </footer>
     </div>
 
